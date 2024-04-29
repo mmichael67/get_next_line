@@ -93,11 +93,17 @@ char	*get_next_line(int fd)
 
 int main()
 {
-	int fd = open("get_next_line.c", O_RDONLY);
+	int fd = open("test", O_RDONLY);
+	char *s;
+	int i;
 
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
+	i = 1;
+	s = get_next_line(fd);
+	while (++i < 10) {
+		printf("%s\n", s);
+		free(s);
+		s = get_next_line(fd);
+	}
+		printf("%s\n", s);
+	free(s);
 }
