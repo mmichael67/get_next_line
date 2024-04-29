@@ -91,21 +91,13 @@ char	*get_next_line(int fd)
 	return (first_l);
 }
 
-// int main()
-// {
-// 	int fd = open("test", O_RDONLY);
-// 	char *s;
-// 	int i;
+int main()
+{
+	int fd = open("get_next_line.c", O_RDONLY);
 
-// 	i = 1;
-// 	s = get_next_line(fd);
-// 	while (++i < 10) {
-		// printf("%s\n", s);
-		// free(s);
-		// s = get_next_line(fd);
-	// }
-	// 	printf("%s\n", s);
-	// free(s);
-// }
-//cc -Wall -Wextra -Werror 
-//-D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.cß
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+}
