@@ -15,3 +15,4 @@ char	*ft_str_nline(const char *s, int i1);
 void	*ft_calloc(size_t totaln);
 char	*ft_str_jfone(char *str1, char *str2);
 #endif
+
