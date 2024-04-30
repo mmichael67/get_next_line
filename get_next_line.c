@@ -71,19 +71,21 @@ char	*get_next_line(int fd)
 	return (first_l);
 }
 
-int main()
-{
-	int fd = open("get_next_line.c", O_RDONLY);
-	char *s;
+// int main()
+// {
+// 	int fd = open("get_next_line.c", O_RDONLY);
+// 	char *s;
 
-	s = get_next_line(fd);
-	printf("%s\n", s);
-	free(s);
-	s = get_next_line(fd);
-	printf("%s\n", s);
-	free(s);
-	s = get_next_line(fd);
-	printf("%s\n", s);
-	free(s);
-}
+// 	s = get_next_line(fd);
+// 	printf("%s\n", s);
+// 	free(s);
+// 	s = get_next_line(fd);
+// 	printf("%s\n", s);
+// 	free(s);
+// 	s = get_next_line(fd);
+// 	printf("%s\n", s);
+// 	free(s);
+// 	close(fd);
+// 	return (0);
+// }
 //cc -Wall -Wextra -Werror  -D BUFFER_SIZE=42 *.c
