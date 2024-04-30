@@ -10,7 +10,6 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-char	*ft_free_null(char *buffer, char *temp);
 size_t	ft_slen(const char *str);
 char	*ft_str_nline(const char *s, int i1);
 void	*ft_calloc(size_t totaln);
