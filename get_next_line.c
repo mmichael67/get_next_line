@@ -48,14 +48,6 @@ char	*write_line_buff(char *s_buff, char *first_l)
 	return (free(s_buff), second_l);
 }
 
-// char	*ft_free_null(char **s_buff, char *temp)
-// {
-// 	if (s_buff != temp)
-// 		free(s_buff);
-// 	free(temp);
-// 	return (NULL);
-// }
-
 char	*get_next_line(int fd)
 {
 	static char	*s_buff;
@@ -82,10 +74,16 @@ char	*get_next_line(int fd)
 int main()
 {
 	int fd = open("get_next_line.c", O_RDONLY);
+	char *s;
 
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
+	s = get_next_line(fd);
+	printf("%s\n", s);
+	free(s);
+	s = get_next_line(fd);
+	printf("%s\n", s);
+	free(s);
+	s = get_next_line(fd);
+	printf("%s\n", s);
+	free(s);
 }
+//cc -Wall -Wextra -Werror  -D BUFFER_SIZE=42 *.c
