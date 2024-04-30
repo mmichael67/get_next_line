@@ -52,4 +52,3 @@ char	*ft_str_jfone(char *str1, char *str2)
 	free(str1);
 	return (result_str);
 }
-
