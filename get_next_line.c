@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mmansuri <mmansuri@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 09:43:25 by mmansuri          #+#    #+#             */
-/*   Updated: 2024/04/30 01:28:31 by mmansuri         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line.h"
 
 char	*read_file(int fd, char *s_buff)
@@ -93,17 +81,11 @@ char	*get_next_line(int fd)
 
 int main()
 {
-	int fd = open("test", O_RDONLY);
-	char *s;
-	int i;
+	int fd = open("get_next_line.c", O_RDONLY);
 
-	i = 1;
-	s = get_next_line(fd);
-	while (++i < 10) {
-		printf("%s\n", s);
-		free(s);
-		s = get_next_line(fd);
-	}
-		printf("%s\n", s);
-	free(s);
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
 }
